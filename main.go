@@ -5,10 +5,6 @@ import (
 )
 
 func main() {
-	s := "gopher"
+	s := "Users"
 	fmt.Println("Hello and welcome, %s!", s)
-
-	for i := 1; i <= 7; i++ {
-		fmt.Println("i =", 100/i)
-	}
 }
