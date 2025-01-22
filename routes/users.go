@@ -4,8 +4,6 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-// Дописать 
-
 func SetupRotesUsers (r *gin.Engine) {
 	users := r.Group("/users") {
 		router.GET("/", )
