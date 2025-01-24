@@ -1,16 +1,17 @@
 package routes
 
 import (
-	"github.com/gin-gonic/gin"
 	"UnUpset/controllers"
+	"github.com/gin-gonic/gin"
 )
 
-func SetupRotesUsers (r *gin.Engine) {
-	users := r.Group("/users") {
-		router.GET("/", controllers.GetAllUsers)
-		router.GET("/:id", )
-		router.POST("/", controllers.CreateUser)
-		router.PATCH("/:id", )
-		router.DELETE("/:id", )
+func SetupRotesUsers(r *gin.Engine) {
+	users := r.Group("/users")
+	{
+		users.GET("/", controllers.GetAllUsers)
+		users.GET("/:id")
+		users.POST("/", controllers.CreateUser)
+		users.PATCH("/:id")
+		users.DELETE("/:id")
 	}
 }

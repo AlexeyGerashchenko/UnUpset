@@ -1,12 +1,10 @@
 package main
 
 import (
-	"log"
-	"net/http"
-
 	"UnUpset/config"
 	"UnUpset/models"
 	"UnUpset/routes"
+	"log"
 
 	"github.com/gin-gonic/gin"
 )
