@@ -19,6 +19,10 @@ func GetAllUsers(c *gin.Context) {
 	c.JSON(http.StatusOK, users)
 }
 
+func GetUserById(c *gin.Context) {
+
+}
+
 func CreateUser(c *gin.Context) {
 	var user models.User
 	if err := c.ShouldBindJSON(&user); err != nil {
@@ -32,4 +36,12 @@ func CreateUser(c *gin.Context) {
 		return
 	}
 	c.JSON(http.StatusCreated, user)
+}
+
+func ChangeUserById(c *gin.Context) {
+
+}
+
+func DeleteUser(c *gin.Context) {
+
 }

@@ -9,9 +9,9 @@ func SetupRotesUsers(r *gin.Engine) {
 	users := r.Group("/users")
 	{
 		users.GET("/", controllers.GetAllUsers)
-		users.GET("/:id")
+		users.GET("/:id", controllers.GetUserById)
 		users.POST("/", controllers.CreateUser)
-		users.PATCH("/:id")
-		users.DELETE("/:id")
+		users.PATCH("/:id", controllers.ChangeUserById)
+		users.DELETE("/:id", controllers.DeleteUser)
 	}
 }

@@ -1,14 +1,15 @@
 package routes
 
 import (
+	"UnUpset/controllers"
 	"github.com/gin-gonic/gin"
 )
 
 func SetupRotesTimer(r *gin.Engine) {
 	timer := r.Group("/timer")
 	{
-		timer.GET("/")
-		timer.GET("/:id")
-		timer.PATCH("/:id")
+		timer.GET("/", controllers.GetAllTimers)
+		timer.GET("/:id", controllers.GetTimersById)
+		timer.PATCH("/:id", controllers.ChangeTimerById)
 	}
 }
