@@ -5,7 +5,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func SetupRotesTodos(r *gin.Engine) {
+func SetupRoutesTodos(r *gin.Engine) {
 	todos := r.Group("/todos")
 	{
 		todos.GET("/", controllers.GetAllTodos)

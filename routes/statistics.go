@@ -5,7 +5,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func SetupRotesStatistics(r *gin.Engine) {
+func SetupRoutesStatistics(r *gin.Engine) {
 	statistics := r.Group("/statistics")
 	{
 		statistics.GET("/", controllers.GetAllStatistics)
