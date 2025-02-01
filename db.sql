@@ -21,11 +21,3 @@ CREATE TABLE statistics (
                             record_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                             FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE
 );
-
-CREATE TABLE timers (
-                        user_id INT NOT NULL,
-                        timer_length INT NOT NULL,
-                        start_timer TIMESTAMP NOT NULL,
-                        end_timer TIMESTAMP NOT NULL,
-                        FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE
-);

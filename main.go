@@ -19,7 +19,6 @@ func main() {
 	routes.SetupRoutesUsers(r)
 	routes.SetupRoutesTodos(r)
 	routes.SetupRoutesStatistics(r)
-	routes.SetupRoutesTimer(r)
 	log.Println("Server is running on http://localhost:8080")
 	err = r.Run(":8080")
 	if err != nil {
